@@ -29,6 +29,7 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         createApple();
+        createCherries();
     }
     
     /**
@@ -64,5 +65,17 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x ,y);
+    }
+    
+     /**
+     * Creates a new cherry at a random location at the top of the screen*
+     */
+    public void createCherries()
+    {
+        Cherries cherries = new Cherries();
+        cherries.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(cherries, x ,y);
     }
 }

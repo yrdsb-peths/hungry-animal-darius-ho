@@ -79,6 +79,9 @@ public class Elephant extends Actor
         // Remove apple if elephant eats it
         eat();
         
+        // Remove Cherries if elephant eats it
+        eatAgain();
+        
         // Animate the elephant
         animateElephant();
     }
@@ -93,6 +96,21 @@ public class Elephant extends Actor
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
+            world.increaseScore();
+            elephantSound.play();
+        }
+    }
+    
+    /**
+     * Eat the Cherries and spawns a new apple once the old apple is eaten
+     */
+    public void eatAgain()
+    {
+        if(isTouching(Cherries.class))
+        {
+            removeTouching(Cherries.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createCherries();
             world.increaseScore();
             elephantSound.play();
         }
