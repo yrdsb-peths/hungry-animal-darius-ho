@@ -27,7 +27,7 @@ public class titleScreen extends World
      */
     public void act()
     {
-        // Start the gae if user presses the space bar
+        // Start the game if user presses the space bar
         if(Greenfoot.isKeyDown("space"))
         {
             MyWorld gameWorld = new MyWorld();
@@ -45,7 +45,7 @@ public class titleScreen extends World
         Elephant elephant = new Elephant();
         addObject(elephant,496,92);
 
-        Label label = new Label("Use \u2190 and \u2192 to Move", 40);
+        Label label = new Label("Use A and D to Move", 40);
         addObject(label,300,242);
         Label label2 = new Label("Press <space> to Start", 40);
         addObject(label2,305,339);
