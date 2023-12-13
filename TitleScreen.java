@@ -1,27 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Title screen
  * 
  * @author Darius
  * @version December 5 2023
  */
-public class titleScreen extends World
+public class TitleScreen extends World
 {
     Label titleLabel = new Label("The Elephant", 70);
     /**
      * Constructor for objects of class titleScreen.
      * 
      */
-    public titleScreen()
+    public TitleScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-
         addObject(titleLabel, 225, 100);
         prepare();
     }
-
     /**
      * The main world act loop
      */
@@ -41,10 +38,8 @@ public class titleScreen extends World
      */
     private void prepare()
     {
-
         Elephant elephant = new Elephant();
         addObject(elephant,496,92);
-
         Label label = new Label("Use A and D to Move", 40);
         addObject(label,300,242);
         Label label2 = new Label("Press <space> to Start", 40);
